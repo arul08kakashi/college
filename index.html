@@ -3,39 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A.V.C. College (Autonomous) - Home</title>
+    <title>A.V.C. College (Autonomous) - Login</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
-        header { background: #1a237e; color: #fff; padding: 2rem; text-align: center; }
-        nav { background: #3f51b5; padding: 1rem; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        .container { max-width: 900px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        footer { text-align: center; padding: 1.5rem; background: #333; color: white; margin-top: 2rem; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #1a2b6c;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 14px;
+            color: #dcdcdc;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #2b3e8c;
+            display: flex;
+            justify-content: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Container */
+        .main-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .login-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-card h2 {
+            margin-bottom: 20px;
+            color: #1a2b6c;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-group input:focus {
+            border-color: #1a2b6c;
+            outline: none;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 11px;
+            background-color: #1a2b6c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background-color: #142152;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Header -->
     <header>
         <h1>A.V.C. College (Autonomous)</h1>
         <p>Mannampandal, Mayiladuthurai</p>
     </header>
 
+    <!-- Navigation Menu -->
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="academics.html">Academics</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="#">About Us</a>
+        <a href="#">Academics</a>
+        <a href="#">Contact Us</a>
     </nav>
 
-    <div class="container">
-        <h2>Welcome to Our Institution</h2>
-        <p>A.V.C. College (Autonomous) is dedicated to delivering excellence in higher education, fostering academic research, and building character in every student.</p>
-        <p>Use the navigation menu above to explore our academic programs, learn about our history, or get in touch with our administrative office.</p>
+    <!-- Login Form Section -->
+    <div class="main-container">
+        <div class="login-card">
+            <h2>Institution Portal Login</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="username">Username / Roll Number</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 A.V.C. College (Autonomous). All rights reserved.</p>
+        &copy; 2026 A.V.C. College (Autonomous). All rights reserved.
+    </footer>
+
+</body>
+</html>
     </footer>
 
 </body>
